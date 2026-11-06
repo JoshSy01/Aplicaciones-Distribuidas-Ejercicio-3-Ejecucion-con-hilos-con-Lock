@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  sin-lock:
+    image: python:3.11-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python -u Hilos_sin_lock.py
+
+  con-lock:
+    image: python:3.11-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python -u Hilos_con_lock.py
